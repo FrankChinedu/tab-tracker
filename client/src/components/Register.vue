@@ -1,10 +1,7 @@
 <template>
-  <v-layout column>
-    <v-flex xs6 >
-      <div class="white elevation-2">
-        <v-toolbar flat dense class="cyan" dark>
-          <v-toolbar-title>Register</v-toolbar-title>
-        </v-toolbar>
+  <v-layout >
+    <v-flex xs6 offset-xs3>
+      <panel title="Register">
         <div class="pl-4 pr-4 pt-2 pb-2">
           <form>
             <v-text-field
@@ -23,14 +20,18 @@
             <v-btn class="cyan" @click="register">Register</v-btn>
           </form>
         </div>
-      </div>
+      </panel>
     </v-flex>
   </v-layout>
 </template>
 
 <script>
+import Panel from '@/components/Panel'
 import AuthenticationService from '@/services/AuthenticationService'
 export default {
+  components: {
+    Panel
+  },
   data () {
     return {
       email: '',

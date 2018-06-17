@@ -26,12 +26,9 @@
 </template>
 
 <script>
-import Panel from '@/components/Panel'
 import AuthenticationService from '@/services/AuthenticationService'
+
 export default {
-  components: {
-    Panel
-  },
   data () {
     return {
       email: '',

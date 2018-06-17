@@ -27,11 +27,9 @@ import Lyrics from './Lyrics'
 import Tab from './Tab'
 import YouTube from './YouTube'
 import SongsServices from '@/services/SongsServices'
-import Panel from '@/components/Panel'
 
 export default {
   components: {
-    Panel,
     SongMetadata,
     YouTube,
     Lyrics,
@@ -39,7 +37,7 @@ export default {
   },
   data () {
     return {
-      song: null
+      song: {}
     }
   },
   async mounted () {
